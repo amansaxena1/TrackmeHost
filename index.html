@@ -1,22 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" href="menu.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrackMe</title>
-</head>
-<body style="background-color: #1c1b1b;">
-    
-    <img style="margin-top: 200px; display: block; margin-left: auto; margin-right: auto; width: 100px; height: 100px;" src="menu.png">
-    <div style="width: 100%; text-align: center; margin-top: 50px;">
-        <a style="align-content: center; color: white; font-size: 30px; font-family: 'Bubblegum Sans', cursive;" href="https://www.youtube.com/watch?v=RklmUJf9xUI">Demo Video</a>
-        <a style="align-content: center; color: white; font-size: 30px; font-family: 'Bubblegum Sans', cursive;" href="TrackMe.apk">Download</a>
-        <p style="align-content: center; margin-top: 50px; color: white; font-size: 15px; font-family: 'Bubblegum Sans', cursive;">Demo Number: 8081007135</p>
-        <p style="align-content: center; color: white; font-size: 15px; font-family: 'Bubblegum Sans', cursive;">Demo Password: 12345678</p>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: #242424;
+      vertical-align: middle;
+      justify-content: center;
+      font-size: 25px;
+      color: #ffffff;
+      font-family: "Sniglet", cursive;
+      text-align: center;
+    }
+    p {
+      margin: 30px;
+    }
+    a {
+      color: #fff;
+      font-family: "Sniglet", cursive;
+      background-color: #353535;
+      font-size: 15px;
+      text-decoration: none;
+      border-radius: 10px;
+      border-width: 0px;
+      padding: 7px 10px 7px 10px;
+      letter-spacing: 1px;
+    }
+    a:hover {
+      color: #000;
+      transition: 0.3s ease-in;
+    }
+    .header {
+      margin-top: 60px;
+      font-size: 100px;
+      font-family: "Monoton", cursive;
+    }
+  </style>
+  <body>
+    <p class="header">
+      <span style="color: #ff0000">T</span>
+      <span style="color: #ff355e">R</span>
+      <span style="color: #ff6037">A</span>
+      <span style="color: #ffff66">C</span>
+      <span style="color: #ffffff">K</span>
+      <span style="color: #66ff66">M</span>
+      <span style="color: #ff00cc">E</span>
+    </p>
+    <p>
+      An Android Application for
+      <span style="color: #00ddd4">Time Management</span>
+    </p>
+    <img
+      src="./logo.png"
+      style="
+        background-color: #191919;
+        width: 200px;
+        margin: 30px;
+        border-radius: 20px;
+        padding: 20px;
+      "
+    />
+    <div>
+      <a
+        id="bt1"
+        href="https://www.youtube.com/watch?v=RklmUJf9xUI"
+        target="_blank"
+        >Take Demo</a
+      >
+      <a id="bt2" href="TrackMe.apk">Download</a>
     </div>
-</body>
+    <div style="margin-top: 6px">
+      <a
+        id="bt3"
+        href="https://amansaxena1.github.io/portfolio/"
+        target="_blank"
+        >View More <span id="arrow">➜</span></a
+      >
+    </div>
+    <script>
+      var col = [
+        "#ff355e",
+        "#ff6037",
+        "#ffff66",
+        "#66ff66",
+        "#50bfe6",
+        "#ff00cc",
+      ];
+
+      const bt1 = document.getElementById("bt1");
+      const bt2 = document.getElementById("bt2");
+      const bt3 = document.getElementById("bt3");
+
+      bt1.addEventListener("mouseover", function handleMouseOver() {
+        bt1.style.backgroundColor = col[Math.floor(Math.random() * 100) % 6];
+      });
+      bt1.addEventListener("mouseout", function handleMouseOut() {
+        bt1.style.backgroundColor = "#353535";
+      });
+      bt2.addEventListener("mouseover", function handleMouseOver() {
+        bt2.style.backgroundColor = col[Math.floor(Math.random() * 100) % 6];
+      });
+      bt2.addEventListener("mouseout", function handleMouseOut() {
+        bt2.style.backgroundColor = "#353535";
+      });
+      bt3.addEventListener("mouseover", function handleMouseOver() {
+        bt3.style.backgroundColor = col[Math.floor(Math.random() * 100) % 6];
+        document.getElementById("arrow").style.color = "#fff";
+      });
+      bt3.addEventListener("mouseout", function handleMouseOut() {
+        bt3.style.backgroundColor = "#353535";
+        document.getElementById("arrow").style.color =
+          col[Math.floor(Math.random() * 100) % 6];
+      });
+
+      document.getElementById("arrow").style.color =
+        col[Math.floor(Math.random() * 100) % 6];
+    </script>
+  </body>
 </html>
